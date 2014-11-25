@@ -13,6 +13,13 @@
 {{$content}}
 <main id="page-container" role="main">
 
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">ALPHA</strong>
+      <span>This is a new service – your <a href="/feedback">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+
   <a href="/" class="example-back-link">Back</a>
 
   <form action="s2" method="post" class="form">
@@ -26,7 +33,7 @@
 	<legend class="form-label-bold add-padding">Your name</legend>
 
     <div class="form-group">
-    <!--<label class="form-control-label" for="fullNameFirst">First name</label>-->
+      <!--<label class="form-control-label" for="fullNameFirst">First name</label>-->
       <label class="form-label" for="full-name">First name</label>
       <input type="text" class="form-control" id="full-name">
     </div>
@@ -43,7 +50,6 @@
     
     </fieldset>
     
-    
     <fieldset class="inline">
     
     	<legend class="form-label-bold add-padding" for="other-surname">Have you ever changed your surname?</legend><!--form-label-bold-->
@@ -59,7 +65,7 @@
   	        </label>        
   	     </div>
     <!--js-hidden-->
-	    <div class="panel-indent" id="other-surname">
+	    <div class="panel-indent js-hidden" id="other-surname">
 	        <label class="form-label" for="other-surname">Previous surname</label>
 	        <input type="text" class="form-control" id="other-surname">
 	    </div>

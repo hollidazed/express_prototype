@@ -58,6 +58,9 @@ fieldset {
     @include core-19;
   }
 }
+.form-label-bold.add-padding {
+	margin-bottom: .83333em;
+}
 
 // Used for paragraphs in-between form elements
 .form-block {

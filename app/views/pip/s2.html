@@ -5,7 +5,7 @@
 {{/head}}
 
 {{$propositionHeader}}
-  {{>includes/propositional_navigation_alpha}}
+  {{>includes/propositional_navigation}}
 {{/propositionHeader}}
 
 {{$headerClass}}with-proposition{{/headerClass}}
@@ -13,85 +13,84 @@
 {{$content}}
 <main id="page-container" role="main">
 
-  <div class="phase-banner">
-    <p>
-      <strong class="phase-tag">ALPHA</strong>
-      <span>This is a new service – your <a href="/feedback">feedback</a> will help us to improve it.</span>
-    </p>
-  </div>
+{{>includes/phase_banner}}
 
-  <a href="/" class="example-back-link">Back</a>
-
-  <form action="s2" method="post" class="form">
+  <form action="s3.html" method="#" class="form">
+  
+  	<a href="s1" class="example-back-link">Back</a>
+  
+  	<div class="section-progress">
+  	    Section 2 of 4
+  	</div>
 
     <h1 class="form-title heading-large">
-      Your details
+      Nationality and where you live
     </h1>
 
-    <!-- Full name -->
-    <div class="form-group">
-      <label class="form-label-bold" for="full-name">Full name</label>
-      <p class="form-hint">As shown on your birth certificate or passport</p>
-      <input type="text" class="form-control" id="full-name">
+    <!-- Nationality -->
+    <fieldset>
+    <legend class="form-label-bold add-padding" for="other-surname">What is your nationality?</legend><!--form-label-bold-->
+    
+    <div class="form-group"><!-- 'form-group-compound' -->	
+          <label class="block-label" for="nationality-british">
+            <input id="nationality-british" type="radio" name="nationality" value="Yes" class="js-toggle">
+            British
+          </label>
+          <label class="block-label" for="nationality-other" data-target="other-country">
+            <input id="nationality-other" type="radio" name="nationality" value="No" class="js-toggle">
+            Another country
+          </label>         
+      </div>  
+
+    <div class="panel-indent js-hidden" id="other-country">
+      <label class="form-label" for="other-surname-country">Your nationality</label>
+      <input type="text" class="form-control" id="nationality-other-country">
     </div>
+    </fieldset>
+    
+    
+    <!-- Do you live in England, Scotland, or Wales -->
+    <fieldset class="inline">
+   
+    <legend class="form-label-bold" for="where-you-live">Do you<!-- normally--> live in England, Scotland or Wales?</legend><!--form-label-bold-->
+    <p class="form-hint">If you live in Northern Ireland…</p>
+    
+    <div class="form-group"><!-- 'form-group-compound' -->	
+          <label class="block-label" for="where-you-live-yes">
+            <input id="where-you-live-yes" type="radio" name="where-you-live" value="Yes" class="js-toggle">
+            Yes
+          </label>
+          <label class="block-label" for="where-you-live-no" data-target="live-elsewhere">
+            <input id="where-you-live-no" type="radio" name="where-you-live" value="No" class="js-toggle">
+            No
+          </label>         
+     </div>  
 
-    <!-- National Insurance number -->
-    <div class="form-group">
-      <label class="form-label-bold" for="ni-number">
-        National Insurance number
-        <span class="form-hint">
-          It's on your National Insurance card, benefit letter, payslip or P60.
-          <br>
-          For example, 'VO 12 34 56 D'
-        </span>
-      </label>
-      <input type="text" class="form-control" id="ni-number">
+    <div class="panel-indent js-hidden" id="live-elsewhere">
+      <label class="form-label" for="live-elsewhere-country">Country you live in</label>
+      <input type="text" class="form-control" id="live-elsewhere-country">
     </div>
-
-    <!-- Date of birth -->
-    <div class="form-group">
-      <fieldset>
-        <legend class="form-label-bold">Date of birth</legend>
-
-        <div class="form-date">
-          <p class="form-hint">For example, 08 04 2014</p>
-
-          <div class="form-group form-group-day">
-            <label for="dob-day">Day</label>
-            <input type="text" class="form-control" id="dob-day">
-          </div>
-          <div class="form-group form-group-month">
-            <label for="dob-month">Month</label>
-            <input type="text" class="form-control" id="dob-month">
-          </div>
-          <div class="form-group form-group-year">
-            <label for="dob-year">Year</label>
-            <input type="text" class="form-control" id="dob-year">
-          </div>
-        </div>
-
-        <div class="form-date native-date-picker">
-          <p class="form-hint">For example, 08 April 2014</p>
-          <input type="date" class="form-control">
-        </div>
-
-      </fieldset>
-    </div>
-
-    <div class="form-group">
-      <details>
-        <summary><span class="summary">Help with date of birth</span></summary>
-        <div class="panel-indent">
-          <p>
-            If you don’t know your exact date of birth, use the one you put on official documents (for example, your passport or driving licence).
-          </p>
-          <p>
-            If you can’t provide your date of birth you’ll have to send copies of identity documents through the post.
-          </p>
-        </div>
-      </details>
-    </div>
-
+    
+    </fieldset>
+    
+    <!-- Time abroad -->
+    <fieldset class="inline">
+    <legend class="form-label-bold">Have you been away from England, Scotland, Wales or Northern Ireland for more than 4 weeks in the last 3 years? </legend>
+    
+    <p class="form-hint">Answer 'No' if you've only had shorter trips away, even if these accumulate to more than 4 weeks.</p>
+        
+    <div class="form-group"><!-- 'form-group-compound' -->	
+          <label class="block-label" for="time-abroad-yes">
+            <input id="time-abroad-yes" type="radio" name="time-abroad" value="Yes" class="js-toggle">
+            Yes
+          </label>
+          <label class="block-label" for="time-abroad-no">
+            <input id="time-abroad-no" type="radio" name="time-abroad" value="No" class="js-toggle">
+            No
+          </label>         
+     </div>
+     
+     <!--Tell us about this time away. Include the dates you left and returned and details of where you've been. We may need to contact you for more information.-->
 
     <!-- Primary buttons, secondary links -->
     <div class="form-group">

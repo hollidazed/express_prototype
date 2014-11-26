@@ -13,16 +13,16 @@
 {{$content}}
 <main id="page-container" role="main">
 
-  <div class="phase-banner">
-    <p>
-      <strong class="phase-tag">ALPHA</strong>
-      <span>This is a new service – your <a href="/feedback">feedback</a> will help us to improve it.</span>
-    </p>
-  </div>
+  {{>includes/phase_banner}}
 
+  <form action="s2.html" method="#" class="form">
+  
   <a href="/" class="example-back-link">Back</a>
-
-  <form action="s2" method="post" class="form">
+  <!--<a class="back-to-previous" href="#">Back <span class="visuallyhidden"> to the previous question</span></a>-->
+  
+  	<div class="section-progress">
+  	    Section 1 of 4
+  	</div>
 
     <h1 class="form-title heading-large">
       Your details
@@ -54,16 +54,18 @@
     
     	<legend class="form-label-bold add-padding" for="other-surname">Have you ever changed your surname?</legend><!--form-label-bold-->
     	
-    	<div class="form-group form-group-compound">  		
+    	<div class="form-group"><!-- 'form-group-compound' -->	
   	        <label class="block-label" data-target="other-surname" for="other-surname-yes">
-  	          <input id="other-surname-yes" type="radio" name="other-surname" value="Yes" class="js-toggle">
+  	          <input id="other-surname-yes" type="radio" name="other-surname" value="Yes">
   	          Yes
   	        </label>
   	        <label class="block-label" for="other-surname-no">
-  	          <input id="other-surname-no" type="radio" name="other-surname" value="No" class="js-toggle">
+  	          <input id="other-surname-no" type="radio" name="other-surname" value="No">
   	          No
-  	        </label>        
-  	     </div>
+  	        </label>
+  	        
+  	    </div>      
+  	     
     <!--js-hidden-->
 	    <div class="panel-indent js-hidden" id="other-surname">
 	        <label class="form-label" for="other-surname">Previous surname</label>
@@ -94,13 +96,11 @@
     
     
 
-    <!-- National Insurance number -->
+    <!-- National Insurance number-->
     <div class="form-group">
       <label class="form-label-bold" for="ni-number">
         National Insurance number
         <span class="form-hint">
-          <!--It's on your National Insurance card, benefit letter, payslip or P60.
-          <br>-->
           For example, 'VO 12 34 56 D'
         </span>
       </label>
@@ -132,11 +132,36 @@
       </fieldset>
     </div>
     
+    
+    <fieldset>
+    
+    <legend class="form-label-bold">Your address</legend>
+    
+    <p style="color: #6f777b;">If you have no fixed address, provide a contact address where we can write to you.</p>
+    
     <div class="form-group">
-      <label class="form-label-bold" for="full-name">Address</label>
-      
-      
-    </div>
+    	<p class="form-label">Address</p>
+      <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+      <label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
+      <label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
+  	</div>
+  	
+  	<div class="form-group">
+  	  <label class="form-label" for="address">Postcode</label>
+  	  <input type="text" class="form-control-1-4" id="postcode">
+  	
+  	</fieldset>
+  	
+  	<fieldset>
+  	<h3 class="form-label-bold">Contact preferences</h3>
+  	<br>
+  	<br>
+  	</fieldset>
+    
+    <!--<label class="form-checkbox" for="checkbox-telephone-number">
+            <input id="checkbox-telephone-number" type="checkbox" value="checkbox-telephone-number">
+            I need to be contacted using a text phone
+          </label>-->
 
     <!--<div class="form-group">
       <details>

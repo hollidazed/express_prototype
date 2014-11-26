@@ -1,6 +1,13 @@
 // Forms
 // ==========================================================================
 
+// Section progress
+.section-progress {
+  color: #6f777b;
+  font-size: 19px;
+  margin-bottom: 4px;
+}
+
 // Form group is used to wrap label and input pairs
 .form-group {
   float: left;
@@ -39,7 +46,6 @@ fieldset {
     margin-bottom: ($gutter*1.5);
   }
 }
-
 
 // Labels
 

@@ -1,6 +1,13 @@
 // Forms
 // ==========================================================================
 
+// Section progress
+.section-progress {
+  color: #6f777b;
+  font-size: 19px;
+  margin-bottom: 4px;
+}
+
 // Form group is used to wrap label and input pairs
 .form-group {
   float: left;
@@ -40,7 +47,6 @@ fieldset {
   }
 }
 
-
 // Labels
 
 // Form labels, or for legends styled to look like labels
@@ -57,6 +63,9 @@ fieldset {
   .form-hint {
     @include core-19;
   }
+}
+.form-label-bold.add-padding {
+	margin-bottom: .83333em;
 }
 
 // Used for paragraphs in-between form elements

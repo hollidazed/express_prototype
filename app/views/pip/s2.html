@@ -52,16 +52,16 @@
     <!-- Do you live in England, Scotland, or Wales -->
     <fieldset class="inline">
    
-    <legend class="form-label-bold" for="where-you-live">Do you<!-- normally--> live in England, Scotland or Wales?</legend><!--form-label-bold-->
-    <p class="form-hint">If you live in Northern Ireland…</p>
+    <legend class="form-label-bold add-padding" for="where-you-live">Do you live in England, Scotland or Wales?</legend>
+    <!--<p class="form-hint">If you live in Northern Ireland…</p>-->
     
     <div class="form-group"><!-- 'form-group-compound' -->	
           <label class="block-label" for="where-you-live-yes">
-            <input id="where-you-live-yes" type="radio" name="where-you-live" value="Yes" class="js-toggle">
+            <input id="where-you-live-yes" type="radio" name="where-you-live" value="Yes">
             Yes
           </label>
           <label class="block-label" for="where-you-live-no" data-target="live-elsewhere">
-            <input id="where-you-live-no" type="radio" name="where-you-live" value="No" class="js-toggle">
+            <input id="where-you-live-no" type="radio" name="where-you-live" value="No">
             No
           </label>         
      </div>  
@@ -75,20 +75,42 @@
     
     <!-- Time abroad -->
     <fieldset class="inline">
-    <legend class="form-label-bold">Have you been away from England, Scotland, Wales or Northern Ireland for more than 4 weeks in the last 3 years? </legend>
+    <legend class="form-label-bold">Have you been away from England, Scotland, or Wales for more than 4 weeks in the last 3 years? </legend>
     
-    <p class="form-hint">Answer 'No' if you've only had shorter trips away, even if these accumulate to more than 4 weeks.</p>
+    <p class="form-hint">Answer 'No' if you've been away for shorter trips, even if these accumulate to more than 4 weeks.</p>
         
     <div class="form-group"><!-- 'form-group-compound' -->	
-          <label class="block-label" for="time-abroad-yes">
-            <input id="time-abroad-yes" type="radio" name="time-abroad" value="Yes" class="js-toggle">
+          <label class="block-label" for="time-abroad-yes" data-target="time-abroad-details">
+            <input id="time-abroad-yes" type="radio" name="time-abroad" value="Yes">
             Yes
           </label>
           <label class="block-label" for="time-abroad-no">
-            <input id="time-abroad-no" type="radio" name="time-abroad" value="No" class="js-toggle">
+            <input id="time-abroad-no" type="radio" name="time-abroad" value="No">
             No
           </label>         
      </div>
+     
+     <div class="panel-indent js-hidden" id="time-abroad-details">
+       
+       <label class="form-label" for="time-abroad-details">Tell us about where you've been</label>
+       <p class="form-hint">Include dates you left and returned. We might contact you for more information about why you went away.</p>
+       <textarea type="text" id="time-abroad-details" class="form-control"></textarea>         
+       
+       <div class="form-group"><!-- 'form-group-compound' -->	
+       		<p class="form-label">When you went away did you intend to return?</p> 
+             <label class="block-label" for="time-abroad-return-yes">
+               <input id="time-abroad-return-yes" type="radio" name="time-abroad-return" value="Yes">
+               Yes
+             </label>
+             <label class="block-label" for="time-abroad-return-no" data-target="live-elsewhere">
+               <input id="time-abroad-return-no" type="radio" name="time-abroad-return" value="No">
+               No
+             </label>         
+        </div> 
+       
+     </div>
+     
+     </fieldset>
      
      <!--Tell us about this time away. Include the dates you left and returned and details of where you've been. We may need to contact you for more information.-->
 

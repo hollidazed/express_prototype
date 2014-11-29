@@ -1,0 +1,38 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="page-container" role="main">
+
+{{>includes/phase_banner}}
+  
+  	<!--<a href="s4.html" class="example-back-link">Back</a>-->
+
+    <h1 class="form-title heading-large">
+      Thank you
+    </h1>
+    
+
+    <div class="form-group">
+      <a type="submit" class="button" href="start.html">Finished</a>
+    </div>
+
+  </form>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

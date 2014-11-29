@@ -21,7 +21,7 @@
 
 .validation-summary li,
 .validation-summary p {
-  @include core-16;
+  @include core-19;
 }
 
 .validation-summary p {
@@ -36,9 +36,13 @@
   }
 }
 
-.validation-summary .heading-small {
-  margin-top: $gutter-half;
+.validation-summary .heading-small,
+.validation-summary .heading-medium {
+  //margin-top: $gutter-half;
+  margin-top: 10px;
 }
+
+
 
 
 // Validation error message box

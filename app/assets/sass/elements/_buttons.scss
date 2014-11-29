@@ -3,7 +3,8 @@
 
 .button {
   @include button ($button-colour);
-  margin: 0 $gutter-half $gutter-half 0;
+  //margin: 0 $gutter-half $gutter-half 0;
+  margin: $gutter-half $gutter-half $gutter-half 0;
   padding: em(10) em(15) em(5) em(15);
   vertical-align: top;
 }
@@ -24,7 +25,8 @@
 // Start now buttons
 .button-get-started {
   @include bold-24;
-  background-image: url("../images/icons/icon-pointer.png");
+  //background-image: url("../images/icons/icon-pointer.png");
+  background-image: url("https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-9214d04f05b40e641c29066d227c6ffb.png");
   background-repeat: no-repeat;
   background-position: 100% 50%;
   padding: em(7) em(41) em(4) em(16);
@@ -38,3 +40,5 @@
     background-image: url("../images/icons/icon-pointer-2x.png");
   }
 }
+
+

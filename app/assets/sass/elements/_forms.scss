@@ -164,6 +164,11 @@ fieldset {
   }
 }
 
+// Textarea
+textarea {
+  min-height: 6em;
+}
+
 
 // Form validation
 @import "forms/form-validation";

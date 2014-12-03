@@ -146,13 +146,16 @@
     
     </fieldset>
     
+    
+    <h3 class="heading-large">Your health care professionals</h3>
+    
+    <p>We need the details of at least one health professional who can advise us on your circumstances. For example, a GP, hospital doctor, specialist nurse, community psychiatric nurse, occupational therapist, physiotherapist, social worker, counsellor, or support worker. You can add details for up to 3 health care professionals - this will help us to process your claim.</p>
+    
 
     <!-- health care professional  -->
     <fieldset>   
 	    
-	    <legend class="form-label-bold add-padding" for="living-situation">Your health care professional(s)</legend>
-	   
-	   <p>We need details of the professional(s) best placed to advise us on your circumstances. For example, a GP, hospital doctor, specialist nurse, community psychiatric nurse, occupational therapist, physiotherapist, social worker, counsellor, or support worker</p>
+	    <legend class="form-label-bold add-padding">Health care professional details</legend>
 	    
 	    <div class="form-group">
 	      <label class="form-label" for="healthcare-professional-name">Name</label>
@@ -186,6 +189,90 @@
 	      <label class="form-label" for="healthcare-professional-date">When did you last see them? (approximate date)</label>
 	      <input type="text" class="form-control" id="healthcare-professional-date">
 	    </div>
+	    
+	    <a href="#" id="show-health-worker-2" class="button secondary">Add another health care professional</a>
+	    
+	</fieldset>
+	
+	<!-- health care professional  -->
+	<fieldset class="js-hidden" id="health-worker-2">   
+	    
+	    <legend class="form-label-bold add-padding">Health care professional details</legend> 	  
+	
+		<div class="form-group">
+		  <label class="form-label" for="healthcare-professional-name-2">Name</label>
+		  <input type="text" class="form-control" id="healthcare-professional-name-2">
+		</div>
+		
+		<div class="form-group">
+		  <p class="form-label" for="healthcare-professional-address-2">Address</p>   
+		  <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+		  <label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
+		  <label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
+			</div>
+			
+			<div class="form-group">
+			<label class="form-label" for="address">Postcode</label>
+			<input type="text" class="form-control-1-4" id="postcode">
+		</div>
+		
+		<div class="form-group">
+		  <label class="form-label" for="healthcare-professional-type-2">Profession</label>
+		  <p class="form-hint">For example, hospital doctor.</p>
+		  <input type="text" class="form-control" id="healthcare-professional-type-2">
+		</div>
+		
+		<div class="form-group">
+		  <label class="form-label" for="healthcare-professional-phone-2">Phone number</label>
+		  <input type="text" class="form-control" id="healthcare-professional-phone-2">
+		</div>
+		
+		<div class="form-group">
+		  <label class="form-label" for="healthcare-professional-date-2">When did you last see them? (approximate date)</label>
+		  <input type="text" class="form-control" id="healthcare-professional-date-2">
+		</div>
+		
+		<a href="#" id="show-health-worker-3" class="button secondary">Add another health care professional</a>
+	
+	</fieldset>
+	
+	<!-- health care professional  -->
+	<fieldset class="js-hidden" id="health-worker-3">   
+	    
+	 	<legend class="form-label-bold add-padding">Health care professional details</legend>  
+	
+		<div class="form-group">
+		  <label class="form-label" for="healthcare-professional-name-3">Name</label>
+		  <input type="text" class="form-control" id="healthcare-professional-name-3">
+		</div>
+		
+		<div class="form-group">
+		  <p class="form-label" for="healthcare-professional-address-2">Address</p>   
+		  <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+		  <label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
+		  <label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
+			</div>
+			
+			<div class="form-group">
+			<label class="form-label" for="address">Postcode</label>
+			<input type="text" class="form-control-1-4" id="postcode">
+		</div>
+		
+		<div class="form-group">
+		  <label class="form-label" for="healthcare-professional-type-3">Profession</label>
+		  <p class="form-hint">For example, hospital doctor.</p>
+		  <input type="text" class="form-control" id="healthcare-professional-type-3">
+		</div>
+		
+		<div class="form-group">
+		  <label class="form-label" for="healthcare-professional-phone-3">Phone number</label>
+		  <input type="text" class="form-control" id="healthcare-professional-phone-3">
+		</div>
+		
+		<div class="form-group">
+		  <label class="form-label" for="healthcare-professional-date-3">When did you last see them? (approximate date)</label>
+		  <input type="text" class="form-control" id="healthcare-professional-date-3">
+		</div>
     
     </fieldset>
 
@@ -204,6 +291,24 @@
 
 {{$bodyEnd}}
   {{>includes/elements_scripts}}
+ 
+  <script>
+  $(document).ready(function() {
+  
+  	$("#show-health-worker-2").click(function() {
+  	  $("#health-worker-2").show();
+  	  $("#show-health-worker-2").hide();
+  	   return false;
+  	});
+  	$("#show-health-worker-3").click(function() {
+  	  $("#health-worker-3").show();
+  	  $("#show-health-worker-3").hide();
+  	   return false;
+  	});
+  	
+  });
+  </script>
+  
 {{/bodyEnd}}
 
 {{/govuk_template}}

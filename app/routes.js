@@ -8,7 +8,10 @@ module.exports = {
     /* Example pages */
 
     app.get('/examples/hello-world', function (req, res) {
-      res.render('examples/hello-world', {'message' : 'Hello world'});
+      res.render('examples/hello-world', {
+      	'message' : 'Hello world',
+      	'title' : 'Nice to be here'
+      });
     });
 
     app.get('/examples/inheritance', function (req, res) {

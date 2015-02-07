@@ -123,5 +123,29 @@ $(document).ready(function() {
   var toggleContent = new ShowHideContent();
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
+  
 
+  $("a#tab-estimated-sp-value").click(function() {
+    //alert("working!")
+    $(".tabs-nav li").removeClass("active");
+    $(this).parent().addClass("active");
+    $("#estimated-sp-value").show();
+    $("#current-sp-value").hide();
+     return false;
+  });
+  $("a#tab-current-sp-value").click(function() { 
+    $(".tabs-nav li").removeClass("active");
+    $(this).parent().addClass("active");
+    $("#current-sp-value").show();
+    $("#estimated-sp-value").hide();
+     return false;
+  });
+  
+  
 });
+  
+
+
+
+
+

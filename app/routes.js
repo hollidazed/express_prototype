@@ -20,7 +20,15 @@ module.exports = {
 
     app.get('/examples/alpha', function (req, res) {
       res.render('examples/alpha/alpha', {'assetPath' : assetPath });    
-    });
+    });   
+    
+		app.get('/state-pension/ni-record', function (req, res) {
+			res.render('state-pension/ni-record', {
+			'pageTitle' : 'testing',
+			'assetPath' : assetPath		
+			});
+		});
+		
 
   }
 };

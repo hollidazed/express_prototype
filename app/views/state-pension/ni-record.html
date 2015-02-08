@@ -1,0 +1,88 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/sp_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="page-container" role="main">
+
+  {{>includes/phase_banner}}
+	  
+	<div id="login-msg-header">
+	  <div class="outer-block">
+	      <div style="padding: 12px 0 0; color: #666; line-height: 1;"><!-- class="inner-block" -->         
+	          <div> 
+	          	<span class="font-xsmall">Andrew Smith: You last signed in 10:42am, 12 October 2014</span>
+	          </div>
+	      </div>
+	  </div> 
+	</div>
+  
+   
+		<div class="grid-row">
+		
+			<div class="column-two-thirds">
+			
+				<a href="/state-pension/dashboard-v6-incomplete" class="example-back-link">Back</a>
+			
+				<h1 class="heading-xlarge" style="margin: 1em 0 0">Your State Pension</h1>
+				<p class="font-medium">You have 5 non-qualifying years on your National Insurance record that affect your State Pension.</p>	
+				<p><a href="#">Show full National Insurance record</a></p>
+		
+				<h2 class="heading-medium">Non-qualifying years</h2>	
+			
+        <div class="improve-choice-box">  
+	        <p><span class="year">2012/13</span> You can pay £230 to make this a Qualifying Year <a href="#">View</a></p>                        
+        </div>    
+
+        <div class="improve-choice-box">  
+	        <p><span class="year">2010/11</span> You can pay £50 to make this a Qualifying Year <a href="#">View</a></p>                        
+        </div>    
+        
+        <div class="improve-choice-box">           
+					<p><span class="year">2009/10</span> You can pay £400 to make this a Qualifying Year <a href="#">View</a></p>                        
+        </div>
+        
+        <div class="improve-choice-box">  
+          <p><span class="year">1995/96</span> <span class="inactive">It's too late to make this into a Qualifying Year</span> <a href="#">View</a></p> 
+        </div>
+
+        <div class="improve-choice-box">  
+					<p><span class="year">1984/85</span> <span class="inactive"> It's too late to make this into a Qualifying Year</span> <a href="#">View</a></p> 
+        </div>		  
+    
+	    </div><!-- /.column-two-thirds -->
+	      
+	    <div class="column-third related">
+	               
+          <h2 class="heading-medium" style="border-top: 10px solid #005ea5; padding-top: 15px;">Your details</h2> 
+
+          <nav role="navigation" aria-labelledby="parent-subsection">
+          	<ul>         	
+          	  <li>National Insurance number: JL 12 34 56 D</li>
+							<!--<li><a href="#">View your National Insurance record</a></li>-->
+						</ul>
+					</nav>
+
+      	</div><!-- /.column-one-third -->
+
+	      
+		</div><!-- /.div-row -->
+		
+		
+</main><!-- / #page-container -->
+
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

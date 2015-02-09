@@ -418,11 +418,14 @@
 // ni contributions
 
 .year {display:inline-block; min-width: 100px}
+
 .improve-choice-box {
 	display:block; 
 	border-bottom: 1px solid #CCC; 
 	padding: 10px 0
 }
+
+.improve-choice-box p {font-size: 16px}
 
 .improve-choice-box a {
 	float: right;

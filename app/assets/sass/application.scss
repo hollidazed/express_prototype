@@ -389,47 +389,31 @@
 .tab-content nav {margin:1em -1.375em 0}
 
 
-//
+// additional styles
 
-.related ul {
-	font-family: "nta",Arial,sans-serif;
-	font-size: 16px;
-	line-height: 1.25;
-	font-weight: 400;
-	text-transform: none;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+#global-header .header-proposition {padding-top: 0}
+
+#global-header .header-proposition #proposition-menu {margin-top: 2px}
+
+#global-header .header-proposition #proposition-name {font-size: 22px;}
+
+.logo-banner {
+  padding: 20px 0 10px;
+  margin-bottom: 45px;
+}	
+	
+.logo {
+  float: left;
+  margin-bottom: .52632em;
 }
 
-.related li {
-	margin-bottom: 0.75em;
-	padding-left: 0;
+.organisation-logo {
+  font-size: 18px;
+  line-height: 22px;
+  padding: 3px 0 2px 44px;
+  background-image: url(https://assets.digital.cabinet-office.gov.uk/government/assets/crests/org_crest_27px-916806dcf065e7273830577de490d5c7c42f36ddec83e907efe62086785f24fb.png);
+  background-position: 6px center;
+  background-repeat: no-repeat;
+  background-size: auto 25px;
+  border-left: 2px solid #009390;
 }
-
-.related li a {
-	background-position: 0 -287px;
-	background-repeat: no-repeat;
-	display: block;
-	line-height: 1.25em;
-	orphans: 2;
-}
-
-// ni contributions
-
-.year {display:inline-block; min-width: 100px}
-
-.improve-choice-box {
-	display:block; 
-	border-bottom: 1px solid #CCC; 
-	padding: 10px 0
-}
-
-.improve-choice-box p {font-size: 16px}
-
-.improve-choice-box a {
-	float: right;
-	text-align: right;
-} 
-
-span.inactive {color: #999}

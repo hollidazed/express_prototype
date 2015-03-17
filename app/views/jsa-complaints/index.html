@@ -1,0 +1,267 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+	<main id="page-container" role="main">
+	
+	<div class="logo-banner">
+		<div class="logo">
+			<span class="organisation-logo">Department for Work and Pensions</span>
+		</div>
+	</div>
+
+  <form action="done.html" method="#" class="form">
+  
+    <h1 class="form-title heading-large">
+      Make a complaint
+    </h1>
+
+   <fieldset>
+   
+   <legend class="form-label-bold add-padding">Your details</legend>
+	
+    <div class="form-group">
+      <label class="form-label add-padding" for="fullName">Name</label>
+      <input type="text" class="form-control" id="full-name">
+    </div>
+
+    <!-- National Insurance number-->
+    <div class="form-group">
+      <label class="form-label" for="ni-number">
+        National Insurance number
+        <!--<span class="form-hint">
+          For example, 'VO 12 34 56 D'
+        </span>-->
+      </label>
+      <input type="text" class="form-control" id="ni-number">
+    </div>
+	
+    <div class="form-group">
+      <label class="form-label" for="fullName">Postcode</label>
+      <input type="text" class="form-control" id="postcode">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="phoneNumber">Phone number</label>
+      <input type="text" class="form-control" id="phoneNumber">
+    </div>
+
+    </fieldset>
+    
+    <fieldset>
+    
+    <legend class="form-label-bold add-padding" for="type-complaint">What is your complaint about?</legend>
+        
+    <div class="form-group"><!-- 'form-group-compound' -->	
+          <label class="block-label" for="type-complaint-1" data-target="type-complaint-1-details">
+            <input id="type-complaint-1" type="radio" name="type-complaint" value="Yes" class="js-toggle">
+            Contacting Jobcentre Plus
+          </label>
+          <label class="block-label" for="type-complaint-2" data-target="type-complaint-2-details">
+            <input id="type-complaint-2" type="radio" name="type-complaint" value="No" class="js-toggle">
+            Waiting times or delays
+          </label> 
+          <label class="block-label" for="type-complaint-3" data-target="type-complaint-3-details">
+            <input id="type-complaint-3" type="radio" name="type-complaint" value="No" class="js-toggle">
+            Confusing or incorrect information
+          </label>  
+          <label class="block-label" for="type-complaint-4" data-target="type-complaint-4-details">
+            <input id="type-complaint-4" type="radio" name="type-complaint" value="No" class="js-toggle">
+            DWP staff
+          </label>  
+          <label class="block-label" for="type-complaint-5" data-target="type-complaint-5-details">
+            <input id="type-complaint-5" type="radio" name="type-complaint" value="No" class="js-toggle">
+          	Payments</label>
+          <label class="block-label" for="type-complaint-other" data-target="type-complaint-6-details">
+            <input id="type-complaint-other" type="radio" name="type-complaint" value="No" class="js-toggle">
+            Other
+          </label>          
+      </div>  
+   
+	   <div class="js-hidden" id="type-complaint-1-details">
+	   
+	     <p class="form-label-bold add-padding" for="type-complaint">Complaint details</p>
+	     
+	     <div class="form-group">	     
+		     <label class="block-label" for="">
+		       <input id="" type="radio" name="" value="Yes">
+		       I can't get through on the telephone
+		     </label>
+		     <label class="block-label" for="">
+		       <input id="" type="radio" name="" value="Yes">
+		       Interpreters not available
+		     </label> 
+				 <label class="block-label" for="">
+				   <input id="" type="radio" name="" value="Yes">
+				   Office closures
+				 </label> 
+		     <label class="block-label" for="">
+		       <input id="" type="radio" name="" value="Yes">
+		       I've been passed from one member of staff to another
+		     </label>
+		     <label class="block-label" for="">
+		       <input id="" type="radio" name="" value="Yes">      		
+		     	 I have to keep contacting you
+		     	 </label>
+		     <label class="block-label" for="">
+		     	 <input id="" type="radio" name="" value="Yes">  
+		       Other
+		     </label>	     
+	     </div>
+	     
+	     <p class="form-label" for="type-complaint-2-details">What happened and when (1500 characters)</p>
+	     <textarea type="text" class="form-control-3-4"></textarea> 
+	     
+	   </div>
+      
+      <div class="js-hidden" id="type-complaint-2-details">
+        
+        <p class="form-label-bold add-padding" for="type-complaint">Complaint details</p>
+        
+				<div class="form-group">	     
+				  <label class="block-label" for="">
+				    <input id="" type="radio" name="" value="Yes">
+				    You've lost my forms, documents, or certificates
+				  </label>
+				  <label class="block-label" for="">
+				    <input id="" type="radio" name="" value="Yes">
+				    Benefit payment delays or missing payments
+				  </label> 
+					 <label class="block-label" for="">
+					   <input id="" type="radio" name="" value="Yes">
+					   You haven't returned telephone calls or replied to correspondence
+					 </label> 
+				  <label class="block-label" for="">
+				    <input id="" type="radio" name="" value="Yes">
+				    Promises haven't been kept
+				  </label>
+				  <label class="block-label" for="">
+				  	 <input id="" type="radio" name="" value="Yes">  
+				    Other
+				  </label>	     
+				</div>  
+        
+        <p class="form-label" for="type-complaint-2-details">What happened and when (1500 characters)</p>
+        <textarea type="text" class="form-control-3-4"></textarea> 
+      </div>
+      
+      <div class="js-hidden" id="type-complaint-3-details">
+        <p class="form-label-bold add-padding" for="type-complaint">Complaint details</p>
+        
+        <div class="form-group">	     
+          <label class="block-label" for="">
+            <input id="" type="radio" name="" value="Yes">
+            I don't understand the information you've sent me
+          </label>
+          <label class="block-label" for="">
+            <input id="" type="radio" name="" value="Yes">
+            You haven't provided me with the information in the format I asked for
+          </label> 
+        	 <label class="block-label" for="">
+        	   <input id="" type="radio" name="" value="Yes">
+        	   You've sent too much or confusing information
+        	 </label> 
+           <label class="block-label" for="">
+             <input id="" type="radio" name="" value="Yes">
+             My personal details are wrong
+           </label> 
+          <label class="block-label" for="">
+            <input id="" type="radio" name="" value="Yes">
+            You've asked for the same information more than once
+          </label>
+          <label class="block-label" for="">
+          	 <input id="" type="radio" name="" value="Yes">  
+            Other
+          </label>	     
+        </div>
+        
+        <p class="form-label" for="type-complaint-3-details">What happened and when (1500 characters)</p>
+        <textarea type="text" class="form-control-3-4"></textarea> 
+      </div>
+      
+      <div class="js-hidden" id="type-complaint-4-details">
+        <p class="form-label-bold add-padding" for="type-complaint">Complaint details</p>
+        
+        <div class="form-group">	     
+          <label class="block-label" for="">
+            <input id="" type="radio" name="" value="Yes">
+            Staff were unprofessional
+          </label>
+          <label class="block-label" for="">
+            <input id="" type="radio" name="" value="Yes">
+            Staff were rude or abusive
+          </label> 
+        	 <label class="block-label" for="">
+        	   <input id="" type="radio" name="" value="Yes">
+        	   Staff discriminated against me
+        	 </label> 
+          <label class="block-label" for="">
+            <input id="" type="radio" name="" value="Yes">
+            Staff didn't help me
+          </label>
+          <label class="block-label" for="">
+          	 <input id="" type="radio" name="" value="Yes">  
+            Other
+          </label>	     
+        </div>
+        
+        <p class="form-label" for="type-complaint-1-details">What happened and when (1500 characters)</p>
+        <textarea type="text" class="form-control-3-4"></textarea> 
+      </div>
+       
+       <div class="js-hidden" id="type-complaint-5-details">
+         <p class="form-label-bold add-padding" for="type-complaint">Complaint details</p>
+         
+         <div class="form-group">	     
+           <label class="block-label" for="">
+             <input id="" type="radio" name="" value="Yes">
+             My benefit amount is wrong
+           </label>
+           <label class="block-label" for="">
+             <input id="" type="radio" name="" value="Yes">
+             You've stopped my money for the wrong reason
+           </label> 
+            <label class="block-label" for="">
+           	 <input id="" type="radio" name="" value="Yes">  
+             Other
+           </label>    
+         </div>
+         
+         <p class="form-label" for="type-complaint-1-details">What happened and when (1500 characters)</p>
+         <textarea type="text" class="form-control-3-4"></textarea> 
+       </div>
+       
+       <div class="js-hidden" id="type-complaint-6-details">
+         <p class="form-label-bold add-padding" for="type-complaint">Complaint details</p>
+         
+         <p class="form-label" for="type-complaint-1-details">What happened and when (1500 characters)</p>
+         <textarea type="text" class="form-control-3-4"></textarea> 
+       </div>
+    
+    <fieldset>
+
+    <!-- Primary buttons, secondary links -->
+    <div class="form-group">
+      <input type="submit" class="button" value="Send Complaint">
+    </div>
+
+  </form>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

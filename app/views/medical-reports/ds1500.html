@@ -142,22 +142,36 @@
 		<fieldset>	
 			<legend class="form-label-bold add-padding" for="requested">Who asked you to complete this form?</legend>
 			<div class="form-group"><!-- 'form-group-compound' -->	
-		        <label class="block-label" data-target="requested-representitive" for="requested-yes">
-		          <input id="requestd-yes" type="radio" name="requested" value="Yes">
+		        <label class="block-label" for="requested-patient">
+		          <input id="requested-patient" type="radio" name="requested" value="Patient">
 		          Patient
 		        </label>
-		        <label class="block-label" for="other-surname-no">
-		          <input id="requested-no" type="radio" name="requested" value="No">
-		          Representitive
+		        <label class="block-label" data-target="requested-details" for="requested-representitive">
+		          <input id="requested-representitive" type="radio" name="requested" value="Representitive">
+		          Representative
 		        </label>    
 		    </div>      
 		     
 			<!--js-hidden-->
-		  <div class="panel-indent js-hidden" id="requested-representitive">
-		      <label class="form-label" for="representitive-address">Representative address</label>
-		      <input type="text" class="form-control" id="representitive-address">
+		  <div class="panel-indent js-hidden" id="requested-details">
+		  			
+		  			<div class="form-group">
+		        
+		        <p class="form-label-bold add-padding" for="fullName">Representative details</p> 
+		        <div class="form-group">
+		        	<label class="form-label" for="representitive-name">Name</label>
+		        	<input type="text" class="form-control-3-4" id="representitive-name">
+ 						</div>
+ 						<div class="form-group">
+		        	<label class="form-label" for="representitive-address">Address</label>
+		        	<textarea type="text" id="representitive-address" class="form-control-3-4"></textarea>
+		        	<label class="form-label" for="representitive-postcode">Postcode</label>
+		        	<input type="text" class="form-control" id="representitive-postcode">
+		        </div>
+		      
 		  </div>
-		</fieldset>	
+		  
+		 </fieldset>	
 		    
 		 
 		<!-- Clinical features -->	
@@ -193,24 +207,24 @@
     <fieldset>	
     	<legend class="form-label" for="declaration">The person named on this form is my patient. This is a full report of their condition and treatment. I have read and understood the notes on the completion of this form and I am satisfied that the form is appropriate. I am the patient's:</legend>
     	<div class="form-group"><!-- 'form-group-compound' -->	
-            <label class="block-label" data-target="declaration-details" for="declaration-yes">
-              <input id="declaration-yes" type="radio" name="declaration" value="Yes">
+            <label class="block-label" for="declaration-general">
+              <input id="declaration-general" type="radio" name="declaration" value="General Practitioner">
               General Practitioner
             </label>
-            <label class="block-label" for="declaration-no">
-              <input id="declaration-no" type="radio" name="declaration" value="No">
+            <label class="block-label" for="declaration-gmc">
+              <input id="declaration-gmc" type="radio" name="declaration" value="GMC registered consultant">
               GMC registered consultant
             </label>
-            <label class="block-label" for="declaration-no">
-              <input id="declaration-no" type="radio" name="declaration" value="No">
-             Other, please specify
-            </label>          
-        </div>      
+            <label class="block-label" for="declaration-other" data-target="declaration-other-details">
+              <input id="declaration-other" type="radio" name="declaration" value="Other, please specify">
+             Other
+            </label>
+        </div>
          
     	<!--js-hidden-->
-      <div class="panel-indent js-hidden" id="requested-representitive">
-          <label class="form-label" for="representitive-address">Representative address</label>
-          <input type="text" class="form-control" id="representitive-address">
+      <div class="panel-indent js-hidden" id="declaration-other-details">
+          <label class="form-label" for="declaration-explain">Please specify</label>
+          <input type="text" class="form-control" id="declaration-explain">
       </div>
     </fieldset>	
    

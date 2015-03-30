@@ -1,0 +1,64 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+	<main id="page-container" role="main">
+	
+	<div class="logo-banner">
+		<div class="logo">
+			<span class="organisation-logo">Department for Work &amp; Pensions</span>
+		</div>
+	</div>
+	
+	<div class="grid-row">
+	
+	<div class="column-two-thirds">
+  
+  <form action="start.html" method="#" class="form">
+  
+    <h1 class="form-title heading-large">
+      Access medical reports
+    </h1>
+    
+    <p class="font-medium">To access and send medical reports you need to verify your identity using your NHS card.</p>
+    
+    <form action="start.html" method="#" class="form">
+    
+    	<div class="form-group">
+    	  <label class="form-label-bold add-padding" for="nhsPin">NHS pin number</label>
+    	  <p class="form-hint">Some help text…</p>
+    	  <input type="text" class="form-control" id="nhsPin">
+    	</div>
+    
+	    <!-- Primary buttons, secondary links -->
+	    <div class="form-group">
+	      <input type="submit" class="button" value="Sign in">
+	    </div>
+	
+	  </form>
+		
+	</div>
+	
+	</div><!-- /.grid-row -->
+	
+	
+
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

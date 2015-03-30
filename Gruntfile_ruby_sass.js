@@ -6,7 +6,7 @@ module.exports = function(grunt){
       dev: {
         files: {
           'public/stylesheets/application.css': 'app/assets/sass/application.scss',
-          'public/stylesheets/examples.css': 'app/assets/sass/examples.scss',
+          'public/stylesheets/custom.css': 'app/assets/sass/custom.scss',
           'public/stylesheets/elements.css': 'app/assets/sass/elements.scss'
         },
         options: {

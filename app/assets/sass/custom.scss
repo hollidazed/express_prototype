@@ -1,0 +1,30 @@
+/* done page */
+
+.highlighted {
+  background: #28A197;
+  color: #FFF;
+  text-align: center;
+  margin: 2.5em 0 2.5em 0;
+  padding: 1.5em 0 2em 0;
+  font-weight: bold;
+  h1{
+    margin: 0.5em 0;
+  }  
+  h2{
+    margin: 0.5em 0;
+  }
+}
+
+/* declaration */
+
+.help-notice {
+	width: 100%;
+	float: left;
+	clear: both;
+	padding: 0.1em 0 0.1em 1em;
+	background: url(https://assets.digital.cabinet-office.gov.uk/static/icon-important-187bcc8d8a6d56498c4ac26cadad102d.png) no-repeat scroll 0 0.5em;
+	p {
+		padding: 0 1em 0 2em;
+		font-weight: 600;
+	}
+}

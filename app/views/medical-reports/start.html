@@ -1,0 +1,68 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+	<main id="page-container" role="main">
+	
+	<div class="logo-banner">
+		<div class="logo">
+			<span class="organisation-logo">Department for Work &amp; Pensions</span>
+		</div>
+	</div>
+	
+	<div class="grid-row">
+	
+	<div class="column-two-thirds">
+  
+    <h1 class="form-title heading-large">
+      Your reports
+    </h1>
+
+		<ul class="list-bullet">
+			<li><a href="start-ds1500.html"><strong>DS1500</strong> - Report to accompany your patient's claim under Special Rules</a></li>
+			<li><a href="#"><strong>DBD370</strong> - GP Factual Report sent to GP by Assessment Provider and completed by GPs to support normal rules claims to PIP</a></li>
+			<li><a href="#"><strong>DBD365</strong> - Hospital Factual report, as above but to hospital</a></li>
+			<li><a href="#"><strong>ESA113</strong> - sent to GP by Assessment Provider and returned by GPs to support patient claim to ESA – Statement of fitness to work</a></li>
+			<li><a href="#"><strong>Med3</strong> - Fit note from GP</a></li>
+			<li><a href="#"><strong>Med10</strong> - Fit note completed by hospital</a></li>
+			<li><a href="#"><strong>MATB1</strong> - from midwives to give details of pregnancy dates</a></li>
+		</ul>
+		
+	</div>
+	
+	<div class="column-third related">
+			               
+		<h2 class="heading-medium" style="border-top: 10px solid #005ea5; padding-top: 15px;">Your details</h2> 
+		
+		<p class="font-small">Dr Joan Smith <br>
+		0123456789 <br>
+		Oak Tree Surgery, London<br>		
+		joansmith@nhs.net</p>
+		
+		<p><a href="#">Edit details</a></p>
+		
+	</div>
+		
+	</div><!-- /.grid-row -->
+	
+	
+
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

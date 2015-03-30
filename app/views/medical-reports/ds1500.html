@@ -1,0 +1,263 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>includes/propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+
+	<main id="page-container" role="main">
+	
+	<div class="logo-banner">
+		<div class="logo">
+			<span class="organisation-logo">Department for Work &amp; Pensions</span>
+		</div>
+	</div>
+	
+	
+	<div class="grid-row">
+	
+	<div class="column-two-thirds">
+	
+	<a href="start-ds1500.html" class="example-back-link">Back</a>
+
+  <form action="done.html" method="#" class="form">
+  
+    <h1 class="form-title heading-large" style="margin: 1em 0 0">
+      DS1500
+    </h1>
+    
+    <p class="font-medium">Report to accompany your patient's claim under Special&nbsp;Rules</p>
+	
+    <div class="form-group">
+      <label class="form-label-bold add-padding" for="fullName">Patient's name</label>
+      <input type="text" class="form-control-3-4" id="full-name">
+    </div>
+    
+    
+    <div class="form-group">
+      <legend class="form-label-bold add-padding" for="fullName">Patient's address</legend>
+      
+      <label class="form-label" for="address">Address</label>
+      <textarea type="text" id="address" class="form-control-3-4"></textarea>
+      
+      <label class="form-label" for="fullName">Postcode</label>
+      <input type="text" class="form-control" id="postcode">
+    </div>
+
+    <!-- Date of birth -->
+    <div class="form-group">
+      <fieldset>
+        <legend class="form-label-bold">Patient's date of birth</legend>
+
+        <div class="form-date">
+          <p class="form-hint">For example, 08 4 1979</p>
+
+          <div class="form-group form-group-day">
+            <label for="dob-day">Day</label>
+            <input type="text" class="form-control" id="dob-day">
+          </div>
+          <div class="form-group form-group-month">
+            <label for="dob-month">Month</label>
+            <input type="text" class="form-control" id="dob-month">
+          </div>
+          <div class="form-group form-group-year">
+            <label for="dob-year">Year</label>
+            <input type="text" class="form-control" id="dob-year">
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <!-- National Insurance number-->
+    <div class="form-group">
+      <label class="form-label-bold add-padding" for="ni-number">
+        Patient's National Insurance number
+        <!--<span class="form-hint">
+          For example, 'VO 12 34 56 D'
+        </span>-->
+      </label>
+      <input type="text" class="form-control" id="ni-number">
+    </div>
+
+		<!-- diagnosis -->
+		<div class="form-group">
+			<label class="form-label-bold add-padding" for="diagnosis">What is the diagnosis?</label>
+			<input type="text" class="form-control-3-4" id="diagnosis">
+		</div>
+		
+    <!-- Date of diagnosis -->
+    <div class="form-group">
+      <fieldset>
+        <legend class="form-label-bold">Date of diagnosis</legend>
+
+        <div class="form-date">
+          <p class="form-hint">For example, 12 4 2014</p>
+
+          <div class="form-group form-group-day">
+            <label for="dod-day">Day</label>
+            <input type="text" class="form-control" id="dod-day">
+          </div>
+          <div class="form-group form-group-month">
+            <label for="dod-month">Month</label>
+            <input type="text" class="form-control" id="dod-month">
+          </div>
+          <div class="form-group form-group-year">
+            <label for="dod-year">Year</label>
+            <input type="text" class="form-control" id="dod-year">
+          </div>
+        </div>
+      </fieldset>
+    </div>
+		
+		<!-- other relevant diagnoses -->
+		<div class="form-group">
+			<label class="form-label-bold add-padding" for="other-diagnoses">Other relevant diagnoses?</label>
+			<textarea type="text" id="other-diagnoses" class="form-control-3-4"></textarea>
+		</div>
+		
+		<!-- patient aware -->
+		<fieldset class="inline">
+			<legend class="form-label-bold add-padding" for="patient-aware">Is the patient aware of their condition and/or prognosis?</legend>			
+			<div class="form-group">
+		        <label class="block-label" for="patient-aware-yes">
+		          <input id="patient-aware-yes" type="radio" name="patient-aware" value="Yes">
+		          Yes
+		        </label>
+		        <label class="block-label" for="patient-aware-no">
+		          <input id="patient-aware-no" type="radio" name="patient-aware" value="No">
+		          No
+		        </label>        
+		    </div>      
+		</fieldset>	
+		
+		<!-- request -->
+		<fieldset>	
+			<legend class="form-label-bold add-padding" for="requested">Who asked you to complete this form?</legend>
+			<div class="form-group"><!-- 'form-group-compound' -->	
+		        <label class="block-label" for="requested-patient">
+		          <input id="requested-patient" type="radio" name="requested" value="Patient">
+		          Patient
+		        </label>
+		        <label class="block-label" data-target="requested-details" for="requested-representitive">
+		          <input id="requested-representitive" type="radio" name="requested" value="Representitive">
+		          Representative
+		        </label>    
+		    </div>      
+		     
+			<!--js-hidden-->
+		  <div class="panel-indent js-hidden" id="requested-details">
+		  			
+		  			<div class="form-group">
+		        
+		        <p class="form-label-bold add-padding" for="fullName">Representative details</p> 
+		        <div class="form-group">
+		        	<label class="form-label" for="representitive-name">Name</label>
+		        	<input type="text" class="form-control-3-4" id="representitive-name">
+ 						</div>
+ 						<div class="form-group">
+		        	<label class="form-label" for="representitive-address">Address</label>
+		        	<textarea type="text" id="representitive-address" class="form-control-3-4"></textarea>
+		        	<label class="form-label" for="representitive-postcode">Postcode</label>
+		        	<input type="text" class="form-control" id="representitive-postcode">
+		        </div>
+		      
+		  </div>
+		  
+		 </fieldset>	
+		    
+		 
+		<!-- Clinical features -->	
+		<fieldset> 
+		<legend class="form-label-bold add-padding">Clinical features</legend> 
+    <div class="form-group">
+      <label class="form-label" for="clinical-features">Details of clinical features which indicate a severe progressive condition</label>
+      <p class="form-hint">For example, rate of progression, recurrence, staging, tumour markers, CD4 count and viral load, bulbar involvement, respiratory and/or heart failure</p>
+      <textarea type="text" id="clinical-features" class="form-control-3-4"></textarea>
+    </div>
+    </fieldset>  
+   
+  	<!-- treatments -->	    
+    <div class="form-group">
+    <legend class="form-label-bold add-padding">Treatment</legend> 
+			<div class="form-group">
+			  <label class="form-label" for="treatment">Details of relevant past or current treatment with
+			  date including response</label>
+			  <textarea type="text" id="treatment" class="form-control-3-4"></textarea>
+			</div>
+			<div class="form-group">
+			  <label class="form-label" for="treatment-other">Is any other intervention or treatment planned
+			  which may significantly alter progression of the
+			  condition?</label>
+			  <textarea type="text" id="treatment-other" class="form-control-3-4"></textarea>
+			</div>
+    </div>
+   
+    <!-- declaration -->
+    
+    <h2 class="heading-medium">Declaration</h2>
+    
+    <fieldset>	
+    	<legend class="form-label" for="declaration">The person named on this form is my patient. This is a full report of their condition and treatment. I have read and understood the notes on the completion of this form and I am satisfied that the form is appropriate. I am the patient's:</legend>
+    	<div class="form-group"><!-- 'form-group-compound' -->	
+            <label class="block-label" for="declaration-general">
+              <input id="declaration-general" type="radio" name="declaration" value="General Practitioner">
+              General Practitioner
+            </label>
+            <label class="block-label" for="declaration-gmc">
+              <input id="declaration-gmc" type="radio" name="declaration" value="GMC registered consultant">
+              GMC registered consultant
+            </label>
+            <label class="block-label" for="declaration-other" data-target="declaration-other-details">
+              <input id="declaration-other" type="radio" name="declaration" value="Other, please specify">
+             Other
+            </label>
+        </div>
+         
+    	<!--js-hidden-->
+      <div class="panel-indent js-hidden" id="declaration-other-details">
+          <label class="form-label" for="declaration-explain">Please specify</label>
+          <input type="text" class="form-control" id="declaration-explain">
+      </div>
+    </fieldset>	
+   
+   
+    <!-- Primary buttons, secondary links -->
+    <div class="form-group">
+      <input type="submit" class="button" value="Send medical report">
+    </div>
+
+  </form>
+  
+  </div>
+  
+  <div class="column-third related">
+  	               
+  	<h2 class="heading-medium" style="border-top: 10px solid #005ea5; padding-top: 15px;">Your details</h2> 
+  	
+  	<p class="font-small">Dr Joan Smith <br>
+  	0123456789 <br>
+  	Oak Tree Surgery, London<br>		
+  	joansmith@nhs.net</p>
+  	
+  	<p><a href="#">Edit details</a></p>
+  	
+  </div>
+  
+  </div><!-- /.grid-row -->
+  
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
